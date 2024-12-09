@@ -1,0 +1,9 @@
+.container{
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+.navBg{
+    background-image: url(img/AbstractDesign-5_Gpi5_9.svg);
+    background-size: cover;
+}

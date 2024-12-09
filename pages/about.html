@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              dark: "rgb(20 20 20)",
+              btn: "rgb(30 30 30)",
+              bg1: "#1A1A1A",
+            },
+            screens:{
+                xs:{ 'min': '320px', 'max': '639px' }
+              },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>FullStack Shop</title>
+  </head>
+  <body class="bg-dark text-white select-none box-border">
+    <div class="border-b border-gray-800 navBg object-cover w-[100%] relative">
+      <div class="lg:hidden xs:block w-[80%] ml-[40px] h-[350px] bg-bg1 -translate-y-[360px] bg-opacity-95 absolute xs:z-10 duration-1000" id="xsMenu">
+        <ul class=" flex flex-col items-center justify-center w-full h-full">
+          <li class="my-5 xl:my-2 text-2xl"><a href="../index.html">Home</a></li>
+          <li class="my-5 xl:my-2 text-2xl"><a href="../pages/products.html">Products</a></li>
+          <li class="my-5 xl:my-2 text-2xl"><a href="">About</a></li>
+        </ul>
+      </div>
+      <nav class="text-white relative">
+
+        <div class="lg:w-[85%] mx-auto h-[100px] flex justify-between items-center xs:w-[95%]">
+           <div class="flex justify-center items-center w-[30px] h-[30px] lg:hidden z-20">
+            <i class="fa-solid fa-bars xs:block lg:hidden text-center text-[24px] cursor-pointer" onclick="xs_menu()"></i>
+          </div>
+
+
+          <a href="../index.html"><div class="lg:text-5xl font-extrabold">React Shop</div></a>
+          <div class="xl:border-2 xl:rounded-full xl:px-8 flex items-center justify-center bg-dark xs:hidden">
+            <ul class="flex flex-col items-center xl:flex-row min-w-max w-screen xl:w-[400px] xl:justify-around text-xl">
+              <li class="my-5 xl:my-2"><a href="../index.html">Home</a></li>
+              <li class="my-5 xl:my-2"><a href="./products.html">Products</a></li>
+              <li class="my-5 xl:my-2"><a href="">About</a></li>
+            </ul>
+          </div>
+          <div class="flex space-x-4 items-center">
+            <button class="flex items-center bg-dark hover:bg-gray-700 text-white py-1 px-3 rounded border border-gray-800">
+              Login
+            </button>
+            <button class="flex items-center bg-dark hover:bg-gray-700 text-white py-1 px-3 rounded border border-gray-800">
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+        <div class="wrapper flex flex-col-reverse md:flex-row md:items-start items-center justify-center pt-20">
+          <div class="w-3/4 [&amp;>p]:text-lg [&amp;>p]:lg:text-xl [&amp;>h1]:lg:text-3xl">
+            <h1 class="text-3xl mt-6 mb-3 font-extrabold text-[#7E11F8]">About Developer</h1>
+            <p class="text-grayshade-200 dark:text-lightColor-300">
+              Hello there! I'm
+              <span class="font-semibold text-[#7E11F8]">Ali Zarshenas</span
+              >, the passionate developer behind this website. With a keen eye for
+              detail and a love for crafting seamless digital experiences, I set
+              out to create a unique and user-friendly online shopping platform.
+            </p>
+            <h1 class="text-xl mt-6 mb-3 font-extrabold text-[#7E11F8]">
+              Frameworks and Technologies Used</h1>
+            <p class="text-grayshade-200 dark:text-lightColor-300">
+              In the development of this website, I've harnessed the power of the
+              following frameworks and technologies to create a modern,
+              single-page application (SPA):
+            </p>
+            <div class="flex text-4xl md:text-[60px] justify-evenly my-8 text-grayshade-50">
+                <i class="fa-brands fa-react hover:text-blue-400 duration-300"></i>
+                <i class="fa-brands fa-bootstrap hover:text-[#7E11F8] duration-300"></i>
+                <span data-aos="zoom-in" class="aos-init">
+                    <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  role="img"
+                  viewBox="0 0 24 24"
+                  class="hover:text-[#38BDF8] transition-all ease duration-300"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z">                    
+                  </path>
+                    </svg>
+                </span>
+            </div>
+            <h1 class="text-xl mt-6 mb-3 font-extrabold text-[#7E11F8]">
+              A Glimpse into the Backend:
+            </h1>
+            <p class="text-grayshade-200 dark:text-lightColor-300">
+              While my expertise primarily lies in frontend development, I've
+              integrated Node.js and Express.js on the backend to ensure a robust
+              and efficient server-side infrastructure. This combination allows
+              for smooth communication between the frontend and the server,
+              ensuring a seamless user experience.
+            </p>
+            <div class="flex text-4xl md:text-[60px] justify-evenly my-8 text-grayshade-50">
+                <i class="fa-brands fa-node hover:text-[#388E3C] duration-300"></i>
+                <i class="fa-brands fa-python hover:text-blue-400 duration-300"></i>
+            </div>
+            <h1 class="text-xl mt-6 mb-3 font-extrabold text-[#7E11F8]">
+              Let's Connect
+            </h1>
+            <p class="text-grayshade-200 dark:text-lightColor-300">
+              Explore the website, discover the offerings, and if you have any
+              questions or suggestions, I'm here to listen. Your journey through
+              this online shopping experience is as important to me as it is to
+              you. Happy exploring!
+            </p>
+            <div class="flex text-4xl md:text-[60px] justify-evenly my-8 text-grayshade-50">
+             <a href="https://www.linkedin.com/" target="_blank">
+                <i class="fa-brands fa-linkedin hover:text-blue-400 duration-300"></i></a>
+             <a href="https://github.com/OybekMirfayzullayev" target="_blank">
+                <i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+      </div>
+
+
+      <footer class="border-t border-gray-700 py-10 xs:w-[95%] xs:mx-auto">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+            <div class="col-span-2 md:col-span-1">
+              <p class="text-sm text-gray-400">
+                Terms &middot; <a href="#" class="hover:underline">Privacy Policy</a>
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-purple-400 mb-4">Products</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white">Web Studio</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">DynamicBox Flex</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">Programming Forms</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">Integrations</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">Command-line</a></li>
+              </ul>
+            </div>
+  
+            <div>
+              <h3 class="text-lg font-semibold text-purple-400 mb-4">Resources</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white">Documentation</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">Tutorials & Guides</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">Blog</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">Support Center</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">Partners</a></li>
+              </ul>
+            </div>
+  
+            <div>
+              <h3 class="text-lg font-semibold text-purple-400 mb-4">Company</h3>
+              <ul class="space-y-2">
+                <li><a href="#" class="text-gray-300 hover:text-white">Home</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">About us</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">Company values</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">Pricing</a></li>
+                <li><a href="#" class="text-gray-300 hover:text-white">Privacy Policy</a></li>
+              </ul>
+            </div>
+  
+            <div>
+              <h3 class="text-lg font-semibold text-purple-400 mb-4">Subscribe</h3>
+              <p class="text-gray-300 text-sm mb-4">
+                Get the latest news and articles to your inbox every month.
+              </p>
+              <form class="flex items-center space-x-2">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="flex-1 px-4 py-2 rounded bg-gray-800 text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-500 xs:w-[50%]"/>
+                <button
+                  type="submit"
+                  class="p-2 bg-purple-600 text-white rounded hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 xs:hidden"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17.25 6.75L21.5 12m0 0l-4.25 5.25M21.5 12H3"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+      <script src="../JS/xsMenu.js"></script>
+  </body>
+</html>
